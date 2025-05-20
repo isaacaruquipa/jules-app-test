@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+    <nav>
+        <!-- Navigation links will go here -->
+    </nav>
+    <main>
+        <div id="notifications" aria-live="polite"></div>
+        <!-- "Add New Product" button will be inserted here by script.js -->
+        <section id="product-list-section">
+            <h2>Products</h2>
+            <!-- Product list will be displayed here -->
+        </section>
+        <section id="add-product-form-section" style="display: none;">
+            <h2>Add New Product</h2>
+            <form id="add-product-form">
+                <div><label for="addProductName">Name:</label><input type="text" id="addProductName" required></div>
+                <div><label for="addProductDescription">Description:</label><textarea id="addProductDescription"></textarea></div>
+                <div><label for="addProductPrice">Price:</label><input type="number" id="addProductPrice" required step="0.01" min="0"></div>
+                <div><label for="addProductQuantity">Quantity:</label><input type="number" id="addProductQuantity" required step="1" min="0"></div>
+                <div><label for="addProductImageUrl">Image URL:</label><input type="url" id="addProductImageUrl"></div>
+                <button type="submit">Save Product</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </form>
+        </section>
+        <section id="edit-product-form-section" style="display: none;">
+            <h2>Edit Product</h2>
+            <form id="edit-product-form">
+                <div><label for="editProductName">Name:</label><input type="text" id="editProductName" required></div>
+                <div><label for="editProductDescription">Description:</label><textarea id="editProductDescription"></textarea></div>
+                <div><label for="editProductPrice">Price:</label><input type="number" id="editProductPrice" required step="0.01" min="0"></div>
+                <div><label for="editProductQuantity">Quantity:</label><input type="number" id="editProductQuantity" required step="1" min="0"></div>
+                <div><label for="editProductImageUrl">Image URL:</label><input type="url" id="editProductImageUrl"></div>
+                <button type="submit">Save Changes</button>
+                <button type="button" class="cancel-btn">Cancel</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2023 Inventory Systems Inc.</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
